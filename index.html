@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizbinass</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Poppins] text-black">
+    <nav class="max-w-auto p-16 justify-between md:flex md:relative fixed w-full top-0 z-20">
+        <div class="flex justify-end md:justify-between md:items-center">
+            <span class="text-xl tracking-widest mx-4 md:m-0">
+                Rizbinass
+            </span>
+
+            <span class="text-3xl cursor-pointer md:hidden block">
+                <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+
+        <ul class="z-10 text-lg md:text-base flex flex-col w-full h-screen md:h-auto md:w-auto bg-white md:flex-row text-center md:items-center md:mx-0 mx-auto absolute md:static md:bg-transparent inset-x-0 top-[128px] bottom-0 opacity-0 md:opacity-100">
+            <li class="mx-5 my-2 md:my-0">
+                <a href="#">Home</a>
+            </li>
+            <li class="mx-5 my-2 md:my-0">
+                <a class="opacity-50 hover:opacity-100 transition duration-500" href="about.html">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container mt-[128px] md:mt-0 w-auto px-5 md:px-20 flex max-w-full justify-center flex-col">
+        <div class="py-12 text-center">
+            <h1 class="text-2xl md:text-3xl font-bold">I'm Bin! Junior Front-End Developer.</h1>
+            <ul class="mt-6 text-3xl md:text-4xl flex flex-row text-center justify-center">
+                <li class="mx-2">
+                    <ion-icon name="logo-html5"></ion-icon>
+                </li>
+                <li class="mx-2">
+                    <ion-icon name="logo-css3"></ion-icon>
+                </li>
+                <li class="mx-2">
+                    <ion-icon name="logo-javascript"></ion-icon>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-12 mx-auto flex flex-col md:flex-row">
+            <img class="grayscale hover:grayscale-0 transition duration-300 h-auto w-auto  md:h-96" src="/public/assets/img/home1.jpg" alt="profile">
+            <img class="grayscale hover:grayscale-0 transition duration-300 h-auto w-auto md:h-96" src="/public/assets/img/home2.jpg" alt="">
+        </div>
+
+    </div>
+
+    <footer class="text-center mt-8 text-sm">
+        &copy; 2024 Rizbinass. All Rights Reserved.
+    </footer>
+
+
+
+    <script>
+        function Menu(e) {
+    let list = document.querySelector('ul');
+    let nav = document.querySelector('nav');
+    
+    if (e.name === 'menu-outline') {
+        e.name = "close-outline";
+        list.classList.add('opacity-100', 'absolute', 'z-[10]', 'top-[128px]');
+        nav.classList.add('bg-white');
+    } else {
+        e.name = "menu-outline";
+        list.classList.remove('opacity-100', 'absolute', 'z-[10]', 'top[128px]');
+        nav.classList.remove('bg-white');
+    }
+}
+
+
+      </script>
+</body>
+</html>
